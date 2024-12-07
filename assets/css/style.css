@@ -7,6 +7,7 @@ body {
     height: 100vh;
     margin: 0;
 }
+
 .todo-container {
     background-color: #ecf0f1;
     padding: 20px;
@@ -15,14 +16,17 @@ body {
     width: 90%;
     max-width: 400px;
 }
+
 .todo-container h1 {
     text-align: center;
     color: #2c3e50;
 }
+
 .input-section {
     display: flex;
     margin-bottom: 20px;
 }
+
 .input-section input {
     flex: 1;
     padding: 10px;
@@ -30,6 +34,7 @@ body {
     border-radius: 5px;
     outline: none;
 }
+
 .input-section button {
     margin-left: 10px;
     padding: 10px 15px;
@@ -39,13 +44,16 @@ body {
     border-radius: 5px;
     cursor: pointer;
 }
+
 .input-section button:hover {
     background-color: #732d91;
 }
+
 .todo-list {
     list-style: none;
     padding: 0;
 }
+
 .todo-item {
     display: flex;
     justify-content: space-between;
@@ -56,10 +64,12 @@ body {
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
-.todo-item.completed .text {
+
+.completed .text{
     text-decoration: line-through;
     color: gray;
 }
+
 .buttons button {
     margin-left: 5px;
     padding: 5px 10px;
@@ -67,24 +77,95 @@ body {
     border-radius: 5px;
     cursor: pointer;
 }
+
 .buttons .complete {
     background-color: #2ecc71;
     color: white;
 }
+
 .buttons .edit {
     background-color: #f1c40f;
     color: white;
 }
+
 .buttons .delete {
     background-color: #e74c3c;
     color: white;
 }
+
 .buttons .complete:hover {
     background-color: #27ae60;
 }
+
 .buttons .edit:hover {
     background-color: #d4ac0d;
 }
+
 .buttons .delete:hover {
+    background-color: #c0392b;
+}
+
+
+
+
+/*! Modal */
+.modal {
+    display: none;
+    width: 400px;
+    height: 400px;
+    margin: 0 auto;
+    background-color: #bdc3c7;
+    position: fixed;
+    z-index: 99;
+    padding: 20px 5px;
+}
+
+.modal-active {
+    display: block !important;
+}
+
+.modal-todo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.complete {
+    background-color: #2ecc71;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    margin: 5px 10px;
+    cursor: pointer;
+}
+
+.edit {
+    background-color: #f1c40f;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    margin: 5px 10px;
+    cursor: pointer;
+}
+
+.delete {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    margin: 5px 10px;
+    cursor: pointer;
+}
+
+.complete:hover {
+    background-color: #27ae60;
+}
+
+.edit:hover {
+    background-color: #d4ac0d;
+}
+
+.delete:hover {
     background-color: #c0392b;
 }
